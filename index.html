@@ -362,41 +362,39 @@
             </div>
 
             <form class="form" id="project-form">
-              <div class="form__group">
-                <label class="form__label" href="#name">Nombre completo *</label>
-                <input id="name" type="text" required placeholder="Tu nombre y apellido" class="form__input" />
-              </div>
+  <div class="form__group">
+    <label class="form__label" for="name">Nombre completo *</label>
+    <input id="name" name="nombre" type="text" required placeholder="Tu nombre y apellido" class="form__input" />
+  </div>
 
-              <div class="form__group">
-                <label class="form__label" href="#phone">Número de teléfono / WhatsApp *</label>
-                <input id="phone" type="tel" required placeholder="+54 9 11 XXXX XXXX" class="form__input" />
-              </div>
+  <div class="form__group">
+    <label class="form__label" for="phone">Número de teléfono / WhatsApp *</label>
+    <input id="phone" name="telefono" type="tel" required placeholder="+54 9 11 XXXX XXXX" class="form__input" />
+  </div>
 
-              <div class="form__group">
-                <label class="form__label" href="#plan">Plan de interés</label>
-                <div class="form__select-wrapper">
-                  <select id="plan" class="form__select">
-                    <option value="">Seleccioná un plan (opcional)</option>
-                    <option value="Landing Page PRO">Landing Page PRO – Desde $199</option>
-                    <option value="Web Corporativa">Web Corporativa Multi-página – Desde $449</option>
-                    <option value="Tienda Online">Configuración de Tienda Online – Desde $699</option>
-                    <option value="Consulta general">Consulta general / No estoy seguro</option>
-                  </select>
-                </div>
-              </div>
+  <div class="form__group">
+    <label class="form__label" for="plan">Plan de interés</label>
+    <div class="form__select-wrapper">
+      <select id="plan" name="plan" class="form__select">
+        <option value="">Seleccioná un plan (opcional)</option>
+        <option value="Landing Page PRO">Landing Page PRO – Desde $199</option>
+        <option value="Web Corporativa">Web Corporativa Multi-página – Desde $449</option>
+        <option value="Tienda Online">Configuración de Tienda Online – Desde $699</option>
+        <option value="Consulta general">Consulta general / No estoy seguro</option>
+      </select>
+    </div>
+  </div>
 
-              <div class="form__group">
-                <label class="form__label" href="#message">Contame sobre tu proyecto *</label>
-                <textarea id="message" required rows="4" placeholder="¿Qué tipo de negocio tenés? ¿Qué necesitás? ¿Tenés alguna fecha límite?" class="form__textarea"></textarea>
-              </div>
+  <div class="form__group">
+    <label class="form__label" for="message">Contame sobre tu proyecto *</label>
+    <textarea id="message" name="mensaje" required rows="4" placeholder="¿Qué tipo de negocio tenés?..." class="form__textarea"></textarea>
+  </div>
 
-              <button type="submit" class="form__button">
-                Enviar consulta
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </button>
-
-              <p class="form__note">También podés escribirme directamente por WhatsApp. Te respondo pronto.</p>
-            </form>
+  <button type="submit" class="form__button">
+    Enviar consulta
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+  </button>
+</form>
           </div>
 
         </div>

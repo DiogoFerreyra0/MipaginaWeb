@@ -54,15 +54,34 @@ const successBlock = document.getElementById('form-success');
 
 form.addEventListener('submit', (e) => {
   e.preventDefault(); 
-  
-  
-  form.classList.add('hidden');
-  successBlock.classList.remove('hidden');
 
- 
-  setTimeout(() => {
-    successBlock.classList.add('hidden');
-    form.classList.remove('hidden');
-    form.reset();
-  }, 4000);
+  
+  const formData = new FormData(form);
+
+  
+  fetch('enviar.php', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => {
+    if (response.ok) {
+      
+      form.classList.add('hidden');
+      successBlock.classList.remove('hidden');
+
+      
+      setTimeout(() => {
+        successBlock.classList.add('hidden');
+        form.classList.remove('hidden');
+        form.reset(); 
+      }, 4000);
+    } else {
+      
+      alert('¡Ups! Hubo un problema en el servidor al procesar el correo. Por favor, intentá de nuevo más tarde o escribime por WhatsApp.');
+    }
+  })
+  .catch(error => {
+    console.error('Error detectado en la petición:', error);
+    alert('Error de red o conexión. Por favor, verificá tu internet e intentá de nuevo.');
+  });
 });
